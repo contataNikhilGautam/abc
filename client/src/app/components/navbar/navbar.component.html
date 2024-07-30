@@ -1,0 +1,9 @@
+<nav class="navbar bg-body-tertiary mx-5">
+    <form class="container-fluid justify-content-start">
+      <button class="btn btn-outline-success me-2" type="button" [routerLink]="['/forms']" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">Form</button>
+      <button class="btn btn-sm btn-outline-secondary" type="button" [routerLink]="['/table']" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">Table</button>
+    </form>
+  </nav>
+  <router-outlet></router-outlet>
