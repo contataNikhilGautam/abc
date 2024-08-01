@@ -1,1 +1,31 @@
-<p>table works!</p>
+<div class="input-group mx-auto ">
+    <input class="form-control" placeholder="Search By ID">
+    <button type="button" class="btn btn-primary" (click)="searchById()">Search</button>
+</div>
+
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Contact number</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Skills</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(data of filteredData ; track data.empId){
+      <tr style="--zi: 0">
+        <td data-title="One">{{data.employeeName}}</td>
+        <td data-title="Two">{{data.employeeContactNumber}}</td>
+        <td data-title="Three">{{data.employeeAddress}}</td>
+        <td data-title="Four">{{data.employeeGender}}</td>
+        <td data-title="Five">{{data.employeeDepartment}}</td>
+        <td data-title="Six">{{data.employeeSkills}}</td>
+        <td data-title="Seven"><button class="btn btn-danger" (click)="deleteEmp(data.empId)">Delete</button></td>
+      </tr>
+    }
+    </tbody>
+  </table>
